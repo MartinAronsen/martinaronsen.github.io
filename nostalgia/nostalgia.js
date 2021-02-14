@@ -185,7 +185,7 @@ let productCategoryToGoogleCategory = {
 	s.parentNode.insertBefore(t,s)}(window, document,'script',
 	'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq( 'init', '593141774766659' );
+fbq( 'init', '445420049915674' );
 fbq( 'track', 'PageView' );
 
 if ( currentPage === 'category.php' )
