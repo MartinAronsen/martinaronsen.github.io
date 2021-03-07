@@ -379,8 +379,8 @@ $( document ).ready( function()
 		let validUntil = null;
 		if ( $( '.special-ending-in' ).length )
 		{
-			let dateParts = $( '.special-ending-in' ).text().match( /\d{2}([\/.-])\d{2}\1\d{4}/g )[ 0 ].split( '.' );
-			let dateObj = new Date( dateParts[ 2 ] + "-" + dateParts[ 1 ] + "-" + dateParts[ 0 ] + "T00:00:00+01:00" );
+			let dateParts = $( '.special-ending-in' ).text().match( /\d{1,2}([\/.-])\d{2}\1\d{4}/g )[ 0 ].split( '.' );
+			let dateObj = new Date( dateParts[ 2 ] + "-" + dateParts[ 1 ] + "-" + ( '0' + dateParts[ 0 ] ).slice( -2 ) + "T00:00:00+01:00" );
 			validUntil = dateObj.toJSON();
 		}
 
