@@ -537,6 +537,15 @@ $( document ).ready( function()
 			}
 		} );
 	}
+
+	/* Add newsletter signup in the footer */
+	$( '.col-md-3.text-left' ).prepend('<div class="newsletter-box">' +
+			'<h4 class="h4">Nyhetsbrev</h4>' +
+				'<p class="newsletter-box">Meld deg på vårt nyhetsbrev for å få oppdateringer fra oss.</p>' +
+				'<div class="form-group newsletter-btn pt10 pb10">' +
+					'<a class="button btn btn-primary" href="//www.nostalgia.no/newsletter/?action=join">Meld meg på nyhetsbrev</a>' +
+				'</div>' +
+			'</div>');
 });
 
 $( document ).mouseup( function( e )
