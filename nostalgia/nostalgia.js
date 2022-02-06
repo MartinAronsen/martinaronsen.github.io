@@ -552,7 +552,7 @@ $( document ).ready( function()
             '<h4 class="h4">Kundeservice</h4>' +
             '<p><a href="https://www.nostalgia.no/pages/om-oss" class="clean-link">Om Oss</a></p>' +
             '<p><a href="https://www.nostalgia.no/pages/conditions" class="clean-link">Salgsbetingelser</a></p>' +
-            '<p><a href="https://www.nostalgia.no/pages/personvern" class="clean-link">Personvern</a></p>' +
+            '<p><a href="https://www.nostalgia.no/pages/privacy" class="clean-link">Personvern</a></p>' +
         '</div>');
     });
 
