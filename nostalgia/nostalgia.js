@@ -539,21 +539,22 @@ $( document ).ready( function()
     }
 
     /* Add newsletter signup in the footer */
-    $( '.col-md-3.text-left' ).prepend('<div class="newsletter-box">' +
-        '<h4 class="h4">Nyhetsbrev</h4>' +
-        '<p class="newsletter-box">Meld deg på vårt nyhetsbrev for å få oppdateringer fra oss.</p>' +
-        '<div class="form-group newsletter-btn pt10 pb10">' +
-        '<a class="button btn btn-primary" href="//www.nostalgia.no/newsletter/?action=join">Meld meg på nyhetsbrev</a>' +
-        '</div>' +
-        '</div>');
+    //$( '.col-md-3.text-left' ).prepend();
 
-    $( '.col-md-6.text-center' ).prepend('<div>' +
-        '<h4 class="h4">Kundeservice</h4>' +
-        '<p><a href="https://www.nostalgia.no/pages/om-oss" class="clean-link">Om Oss</a></p>' +
-        '<p><a href="https://www.nostalgia.no/pages/conditions" class="clean-link">Salgsbetingelser</a></p>' +
-        '<p><a href="https://www.nostalgia.no/pages/personvern" class="clean-link">Personvern</a></p>' +
+    $( '.col-md-6.text-center' ).prepend('<div class="col-md-6 text-left newsletter-box">' +
+            '<h4 class="h4">Nyhetsbrev</h4>' +
+            '<p class="newsletter-box">Meld deg på vårt nyhetsbrev for å få oppdateringer fra oss.</p>' +
+            '<div class="form-group newsletter-btn pt10 pb10">' +
+                '<a class="button btn btn-primary" href="//www.nostalgia.no/newsletter/?action=join">Meld meg på nyhetsbrev</a>' +
+            '</div>' +
+        '</div>' +
+        '<div class="col-md-6 text-left">' +
+            '<h4 class="h4">Kundeservice</h4>' +
+            '<p><a href="https://www.nostalgia.no/pages/om-oss" class="clean-link">Om Oss</a></p>' +
+            '<p><a href="https://www.nostalgia.no/pages/conditions" class="clean-link">Salgsbetingelser</a></p>' +
+            '<p><a href="https://www.nostalgia.no/pages/personvern" class="clean-link">Personvern</a></p>' +
         '</div>');
-});
+    });
 
 $( document ).mouseup( function( e )
 {
