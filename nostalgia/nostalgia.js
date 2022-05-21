@@ -301,7 +301,7 @@ $( document ).ready( function()
                 "@type": "OfferShippingDetails",
                 "shippingRate": {
                     "@type": "MonetaryAmount",
-                    "value": "130",
+                    "value": "99",
                     "currency": "NOK"
                 },
                 "shippingDestination": [{
