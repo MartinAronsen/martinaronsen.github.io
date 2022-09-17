@@ -207,7 +207,7 @@ $( '#cartDrawer a.btn-default-1.righty' ).on( 'click', function()
 $( document ).ready( function()
 {
     /* Remove "Kiosk" from the navigation */
-    $( 'a[href*="categories/kiosk"]' ).parent().hide();
+    //$( 'a[href*="categories/kiosk"]' ).parent().hide();
 
     let jsonLdObjects = [];
 
@@ -428,7 +428,7 @@ $( document ).ready( function()
                         "@type": "ImageObject",
                         "@id": "https://www.nostalgia.no/#logo",
                         "inLanguage": "nb-NO",
-                        "url": "https://www.nostalgia.no/users/nostalgia_mystore_no/logo/Header09.20.183.png",
+                        "url": "https://www.nostalgia.no/users/nostalgia_mystore_no/logo/Header02.22.227.png",
                         "width": 357,
                         "height": 147,
                         "caption": "Nostalgia F\u00f8nix AS"
@@ -519,123 +519,4 @@ $( document ).ready( function()
             document.querySelector( 'body' ).appendChild( el );
         });
     }
-
-    let t;
-    if ( false )
-    {
-        $( '#keywords' ).keyup( function ()
-        {
-            clearTimeout( t );
-            if ( $( this ).val().length > 2 )
-            {
-                t = window.setTimeout( "build_search_results()", 400 );
-            }
-            else
-            {
-                $( '#search-down-wrapper' ).hide();
-                $( '#search-down-wrapper' ).removeClass( 'showing' );
-            }
-        } );
-    }
-
-    /* Add newsletter signup in the footer */
-    //$( '.col-md-3.text-left' ).prepend();
-
-    $( '.col-md-6.text-center' ).prepend('<div class="col-md-6 text-left newsletter-box">' +
-            '<h4 class="h4">Nyhetsbrev</h4>' +
-            '<p class="newsletter-box">Meld deg på vårt nyhetsbrev for å få oppdateringer fra oss.</p>' +
-            '<div class="form-group newsletter-btn pt10 pb10">' +
-                '<a class="button btn btn-primary" href="//www.nostalgia.no/newsletter/?action=join">Meld meg på nyhetsbrev</a>' +
-            '</div>' +
-        '</div>' +
-        '<div class="col-md-6 text-left">' +
-            '<h4 class="h4">Kundeservice</h4>' +
-            '<p><a href="https://www.nostalgia.no/pages/om-oss" class="clean-link">Om Oss</a></p>' +
-            '<p><a href="https://www.nostalgia.no/pages/conditions" class="clean-link">Salgsbetingelser</a></p>' +
-            '<p><a href="https://www.nostalgia.no/pages/privacy" class="clean-link">Personvern</a></p>' +
-        '</div>');
-    });
-
-$( document ).mouseup( function( e )
-{
-    let container = $( '.search-main' );
-
-    if ( ! container.is( e.target ) && container.has( e.target ).length === 0 )
-    {
-        $( '#search-down-wrapper' ).hide();
-    }
-});
-
-function build_search_results()
-{
-    $.getJSON( '/search_suggest_json?queryString=' + $( '#keywords' ).val(), function ( data )
-    {
-        if ( data != '' && data != null )
-        {
-            $( '#search-down-wrapper' ).html( '' );
-            let items = [];
-            let iterator = 0;
-            let total_iterator = 0;
-
-            items.push( '<div class="tail"></div><div class="clearfix"></div><div class="scontent">' );
-            items.push( '<div class="left_part">' );
-            items.push( '<ul><h3>Søkeforslag</h3>' );
-            $.each( data, function ( key, category )
-            {
-
-                $.each( category.result_entries, function ( result_key, product )
-                {
-                    items.push( '<li><a href="' + product.products_url + '">' + product.products_name + '</a></li>' );
-                } );
-            } );
-            items.push( '</ul>' );
-            items.push( '</div>' );
-            items.push( '<div class="right_part">' );
-            items.push( '<ul class="search_result"><h3>Kanskje ser du etter disse?</h3>' );
-
-            $.each( data, function ( key, category )
-            {
-                // items.push('<h3>' + category.categories_name + '</h3><ul class="list-content">');
-                iterator = 0;
-                $.each( category.result_entries, function ( result_key, product )
-                {
-                    if ( total_iterator < 4 )
-                    {
-                        if ( iterator == 0 )
-                        {
-                            $( '#search-down-wrapper' ).addClass( 'showing' );
-                        }
-
-                        if ( product.specials_price != '' )
-                        {
-                            display_price = '<s>' + product.products_price + '</s> ' + product.specials_price;
-                        }
-                        else
-                        {
-                            display_price = product.products_price;
-                        }
-
-                        items.push( '<li><img src="product_thumb.php?img=' + product.products_image + '&w=45&h=45" class="fleft" alt=""><div class="fleft"><a href="' + product.products_url + '">' + product.products_name.substring( 0, 20 ) + '...</a><span class="manufacturers_name">' + product.manufacturers_name + '</span><span class="display_price">' + display_price + '</span></div>' );
-                        items.push( '</li>' );
-                    }
-                    total_iterator++;
-                    iterator++;
-                } );
-            } );
-
-            items.push( '</ul>' );
-            items.push( '</div>' )
-            items.push( '</div><div class="searchtotal"><a href="/search_result?keywords=' + $( '#keywords' ).val() + '">' + total_iterator + '  produkter matcher søket</a></div>' );
-
-            data = items.join( '' );
-
-            $( '#search-down-wrapper' ).html( data );
-            $( '#search-down-wrapper' ).show();
-        }
-        else
-        {
-            $( '#search-down-wrapper' ).hide();
-            $( '#search-down-wrapper' ).removeClass( 'showing' );
-        }
-    });
 }
