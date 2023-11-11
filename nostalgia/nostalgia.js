@@ -295,46 +295,46 @@ $( document ).ready( function()
                     "@type":"Organization",
                     "name":"Nostalgia Fønix AS",
                     "url":"https://www.nostalgia.no"
-                }
-            },
-            "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "99",
-                    "currency": "NOK"
                 },
-                "shippingDestination": [{
-                    "@type": "DefinedRegion",
-                    "addressCountry": "NO"
-                }],
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "businessDays": {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": [
-                            "https://schema.org/Monday",
-                            "https://schema.org/Tuesday",
-                            "https://schema.org/Wednesday",
-                            "https://schema.org/Thursday",
-                            "https://schema.org/Friday"
-                        ]
-                    },
-                    "cutoffTime": "15:00:00+01:00",
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 2,
-                        "unitCode": "d"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 5,
-                        "unitCode": "d"
-                    }
-                }
-            }
+	            "shippingDetails": {
+		            "@type": "OfferShippingDetails",
+		            "shippingRate": {
+			            "@type": "MonetaryAmount",
+			            "value": "99",
+			            "currency": "NOK"
+		            },
+		            "shippingDestination": [{
+			            "@type": "DefinedRegion",
+			            "addressCountry": "NO"
+		            }],
+		            "deliveryTime": {
+			            "@type": "ShippingDeliveryTime",
+			            "businessDays": {
+				            "@type": "OpeningHoursSpecification",
+				            "dayOfWeek": [
+					            "https://schema.org/Monday",
+					            "https://schema.org/Tuesday",
+					            "https://schema.org/Wednesday",
+					            "https://schema.org/Thursday",
+					            "https://schema.org/Friday"
+				            ]
+			            },
+			            "cutoffTime": "15:00:00+01:00",
+			            "handlingTime": {
+				            "@type": "QuantitativeValue",
+				            "minValue": 0,
+				            "maxValue": 2,
+				            "unitCode": "d"
+			            },
+			            "transitTime": {
+				            "@type": "QuantitativeValue",
+				            "minValue": 1,
+				            "maxValue": 5,
+				            "unitCode": "d"
+			            }
+		            }
+	            }
+            }            
         };
 
         /* Work out the Google product category */
