@@ -296,6 +296,14 @@ $( document ).ready( function()
                     "name":"Nostalgia Fønix AS",
                     "url":"https://www.nostalgia.no"
                 },
+	            "hasMerchantReturnPolicy": {
+					"@type": "MerchantReturnPolicy",
+					"applicableCountry": "NO",
+					"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+					"merchantReturnDays": 14,
+					"returnMethod": [ "https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail" ],
+					"returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+				},
 	            "shippingDetails": {
 		            "@type": "OfferShippingDetails",
 		            "shippingRate": {
@@ -334,7 +342,7 @@ $( document ).ready( function()
 			            }
 		            }
 	            }
-            }            
+            }
         };
 
         /* Work out the Google product category */
