@@ -302,7 +302,7 @@ $( document ).ready( function()
 					"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
 					"merchantReturnDays": 14,
 					"returnMethod": [ "https://schema.org/ReturnInStore", "https://schema.org/ReturnByMail" ],
-					"returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+					"returnFees": "https://schema.org/FreeReturn"
 				},
 	            "shippingDetails": {
 		            "@type": "OfferShippingDetails",
