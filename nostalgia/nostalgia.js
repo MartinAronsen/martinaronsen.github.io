@@ -272,6 +272,7 @@ $( document ).ready( function()
 		description 	= typeof description !== 'undefined' ? description : 'F\u00f8nix er en retro/livsstilsbutikk som f\u00f8rer kl\u00e6r, sko, vesker og tilbeh\u00f8r til Rockabilly, R\u00e6gg\u00e6re, 50-tallsmilj\u00f8er. Vi har avdelinger til b\u00e5de kvinner, menn og barn.';
 		description 	= description.replace( 'Halden', 'Sarpsborg' );
 		description     = description.replace( 'Finnes p&aring; lager i butikken F&oslash;nix i Sarpsborg.', '' );
+		description     = description.replace( 'Finnes på lager i butikken Fønix i Sarpsborg.', '' );
 
 		let productJsonLdObject = {
 			"@context": "https://schema.org/",
